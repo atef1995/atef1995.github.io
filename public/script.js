@@ -30,7 +30,7 @@ window.addEventListener('scroll', () => {
 
 // GitHub repos fetcher
 async function fetchGitHubRepos() {
-    const username = 'atef1995'; // Change this to your GitHub username
+    const username = 'atef1995';
     const reposContainer = document.getElementById('github-repos');
 
     try {
@@ -86,7 +86,7 @@ function createRepoCard(repo) {
             <span class="repo-icon">📁</span>
             <a href="${repo.html_url}" target="_blank" class="repo-name">${repo.name}</a>
         </div>
-        <p class="repo-description">${repo.description || 'no description available'}</p>
+        <p class="repo-description">${repo.description || ''}</p>
         <div class="repo-stats">
             ${repo.language ? `<span class="repo-stat">📝 ${repo.language}</span>` : ''}
             <span class="repo-stat">⭐ ${repo.stargazers_count}</span>
